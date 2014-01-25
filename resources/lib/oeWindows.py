@@ -406,7 +406,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                     xbmcDialog = xbmcgui.Dialog()
                     returnValue = xbmcDialog.browse(
                         1,
-                        'OpenELEC.tv',
+                        'AMLinux',
                         'files',
                         '',
                         False,
@@ -422,12 +422,12 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                     xbmcDialog = xbmcgui.Dialog()
                     returnValue = xbmcDialog.browse(
                         0,
-                        'OpenELEC.tv',
+                        'AMLinux',
                         'files',
                         '',
                         False,
                         False,
-                        '/storage',
+                        '/root',
                         )
                     if returnValue != '' and returnValue != '/':
                         selectedItem.setProperty('value',
@@ -436,7 +436,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                 elif strTyp == 'ip':
 
                     xbmcDialog = xbmcgui.Dialog()
-                    returnValue = xbmcDialog.numeric(3, 'OpenELEC.tv',
+                    returnValue = xbmcDialog.numeric(3, 'AMLinux',
                             strValue)
                     if returnValue != '':
                         if returnValue == '0.0.0.0':
@@ -450,7 +450,7 @@ class mainWindow(xbmcgui.WindowXMLDialog):
                         strValue = '0'
 
                     xbmcDialog = xbmcgui.Dialog()
-                    returnValue = xbmcDialog.numeric(0, 'OpenELEC.tv',
+                    returnValue = xbmcDialog.numeric(0, 'AMLinux',
                             strValue)
                     if returnValue == '':
                         returnValue = -1
@@ -1101,7 +1101,7 @@ class wizard(xbmcgui.WindowXMLDialog):
                             break
 
                 if self.is_last_wizard == True:
-                    self.oe.write_setting('openelec', 'wizard_completed'
+                    self.oe.write_setting('amlinux', 'wizard_completed'
                             , 'True')
                     self.close()
 

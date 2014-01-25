@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: OpenELEC Configuration
-# Addon id: service.openelec.settings
-# Addon Provider: OpenELEC
+# Addon Name: AMLinux Configuration
+# Addon id: service.amlinux.settings
+# Addon Provider: AMLinux
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#600"
-msgid "[COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] Settings"
+msgid "[COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] Settings"
 msgstr ""
 
 msgctxt "#601"
@@ -53,15 +53,15 @@ msgid "Architecture: "
 msgstr ""
 
 msgctxt "#609"
-msgid "Open Embedded Linux Entertainment Center (OpenELEC) is a minimal Linux distribution purpose built for XBMC media center. OpenELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgid "AMLinux is a minimal Linux distribution purpose built for XBMC media center. AMLinux is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
 msgstr ""
 
 msgctxt "#610"
-msgid "[B]Support:[/B][CR]Web: http://openelec.tv[CR]Forum: http://openelec.tv/forum[CR]Wiki: http://wiki.openelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #openelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/openelec[CR]Facebook: http://www.facebook.com/OpenELEC[CR]Google+: https://plus.google.com/+openelec"
+msgid "[B]Support:[/B][CR]Source: http://github.com/wjb[CR]Wiki: http://github.com/wjb"
 msgstr ""
 
 msgctxt "#611"
-msgid "The OpenELEC project runs on goodwill, love, and your donations. If you would like to contribute to the project you can donate using PayPal, Flattr or Bitcoin. Making a donation is easy and takes only a couple of minutes. http://openelec.tv/donate"
+msgid "The AMLinux project runs on goodwill, love, and your donations. If you would like to contribute to the project you can donate using PayPal. Making a donation is easy and takes only a couple of minutes."
 msgstr ""
 
 #empty strings from id 612 to 699
@@ -107,7 +107,7 @@ msgid "709"
 msgstr ""
 
 msgctxt "#710"
-msgid "Configure the Hostname of your OpenELEC system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
+msgid "Configure the Hostname of your AMLinux system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr ""
 
 msgctxt "#711"
@@ -123,7 +123,7 @@ msgid "Configure the physical keyboard type"
 msgstr ""
 
 msgctxt "#714"
-msgid "OpenELEC can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "AMLinux can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
 msgstr ""
 
 msgctxt "#715"
@@ -131,15 +131,15 @@ msgid "Set to ON and an on-screen notification will be displayed when a new upda
 msgstr ""
 
 msgctxt "#716"
-msgid "Click to manually check the OpenELEC servers for an updated release"
+msgid "Click to manually check the AMLinux servers for an updated release"
 msgstr ""
 
 msgctxt "#717"
-msgid "If you have an small LCD or VFD attached to your OpenELEC system you must configure the correct display driver"
+msgid "If you have an small LCD or VFD attached to your AMLinux system you must configure the correct display driver"
 msgstr ""
 
 msgctxt "#718"
-msgid "Set on ON and OpenELEC will spin down attached drives (not the main system drive) when idle"
+msgid "Set on ON and AMLinux will spin down attached drives (not the main system drive) when idle"
 msgstr ""
 
 msgctxt "#719"
@@ -155,7 +155,7 @@ msgid "721"
 msgstr ""
 
 msgctxt "#722"
-msgid "Create a tar archive containing all OpenELEC and XBMC configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
+msgid "Create a tar archive containing all AMLinux and XBMC configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
 msgstr ""
 
 msgctxt "#723"
@@ -163,11 +163,11 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr ""
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset OpenELEC OS configuration to defaults (resets also XBMC to default including your library. your media - music/videos/etc are not touched)"
+msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset AMLinux OS configuration to defaults (resets also XBMC to default including your library. your media - music/videos/etc are not touched)"
 msgstr ""
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset OpenELEC OS and XBMC configuration to defaults (everything in your storage partition will be deleted)"
+msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset AMLinux OS and XBMC configuration to defaults (everything in your storage partition will be deleted)"
 msgstr ""
 
 msgctxt "#726"
@@ -231,7 +231,7 @@ msgid "Set the password for Samba sharing"
 msgstr ""
 
 msgctxt "#742"
-msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password 'openelec'."
+msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password 'letmein'."
 msgstr ""
 
 msgctxt "#743"
@@ -267,7 +267,7 @@ msgid "750"
 msgstr ""
 
 msgctxt "#751"
-msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to OpenELEC."
+msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to AMLinux."
 msgstr ""
 
 msgctxt "#752"
@@ -667,7 +667,7 @@ msgid "Update Available"
 msgstr ""
 
 msgctxt "#32180"
-msgid "Would you like to update OpenELEC now?"
+msgid "Would you like to update AMLinux now?"
 msgstr ""
 
 msgctxt "#32181"
@@ -743,7 +743,7 @@ msgid "SSID"
 msgstr ""
 
 msgctxt "#32199"
-msgid "If you would like to contribute to the OpenELEC project you can make a donation using [CR]PayPal, Flattr or Bitcoin. Donating is easy and takes only a few minutes."
+msgid "If you would like to contribute to the AMLinux project you can make a donation using [CR]PayPal. Donating is easy and takes only a few minutes."
 msgstr ""
 
 msgctxt "#32200"
@@ -817,7 +817,7 @@ msgstr ""
 #empty strings from id 32217 to 32299
 
 msgctxt "#32300"
-msgid "Welcome to [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR]"
+msgid "Welcome to [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR]"
 msgstr ""
 
 msgctxt "#32301"
@@ -825,7 +825,7 @@ msgid "Welcome"
 msgstr ""
 
 msgctxt "#32302"
-msgid "This wizard will guide you through the process of setting up your new [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] Settings.[CR][CR]To begin your [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] experience, select your regional settings and your keyboard layout, then click Next."
+msgid "This wizard will guide you through the process of setting up your new [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] Settings.[CR][CR]To begin your [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] experience, select your regional settings and your keyboard layout, then click Next."
 msgstr ""
 
 msgctxt "#32303"
@@ -833,7 +833,7 @@ msgid "Next"
 msgstr ""
 
 msgctxt "#32304"
-msgid "To be identified easily on the network, your new [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
+msgid "To be identified easily on the network, your new [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
 msgstr ""
 
 msgctxt "#32305"
@@ -841,7 +841,7 @@ msgid "Networking"
 msgstr ""
 
 msgctxt "#32306"
-msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] needs to be connected the Internet.[CR][CR]An Internet connection is also required for [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] to automatically update itself."
+msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] needs to be connected the Internet.[CR][CR]An Internet connection is also required for [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] to automatically update itself."
 msgstr ""
 
 msgctxt "#32307"
@@ -865,11 +865,11 @@ msgid "Sharing and Remote Access"
 msgstr ""
 
 msgctxt "#32312"
-msgid "[COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] also supports SSH for remote access. This is for advanced users who wish to interact with [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR]'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]openelec.[/COLOR]"
+msgid "[COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] also supports SSH for remote access. This is for advanced users who wish to interact with [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR]'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]letmein.[/COLOR]"
 msgstr ""
 
 msgctxt "#32313"
-msgid "In order to share your files between your computers [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
+msgid "In order to share your files between your computers [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
 msgstr ""
 
 msgctxt "#32314"
@@ -889,7 +889,7 @@ msgid "Thank you"
 msgstr ""
 
 msgctxt "#32318"
-msgid "You [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] installation is now complete and you'll now enter XBMC when you can set up your media libraries. For help with this, there is a guide available at wiki.xbmc.org[CR][CR][COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at openelec.tv"
+msgid "You [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] installation is now complete and you'll now enter XBMC when you can set up your media libraries. For help with this, there is a guide available at wiki.xbmc.org[CR][CR][COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] as much as we've enjoying building it."
 msgstr ""
 
 msgctxt "#32319"
@@ -917,7 +917,7 @@ msgid "Reset System Settings to defaults"
 msgstr ""
 
 msgctxt "#32325"
-msgid "Reset OpenELEC to defaults"
+msgid "Reset AMLinux to defaults"
 msgstr ""
 
 msgctxt "#32326"
@@ -1023,7 +1023,7 @@ msgid "Check for updates now:"
 msgstr ""
 
 msgctxt "#32363"
-msgid "[COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR]"
+msgid "[COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR]"
 msgstr ""
 
 msgctxt "#32364"

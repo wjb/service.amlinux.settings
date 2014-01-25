@@ -44,7 +44,7 @@ class service_thread(threading.Thread):
             
             self.wait_evt = threading.Event()
             
-            self.socket_file = '/var/run/service.openelec.settings.sock'
+            self.socket_file = '/var/run/service.amlinux.settings.sock'
 
             self.sock = socket.socket(socket.AF_UNIX,
                     socket.SOCK_STREAM)
@@ -92,7 +92,7 @@ class service_thread(threading.Thread):
 
             self.oe.dbg_log('_service_::run', 'enter_function', 0)
             
-            if self.oe.read_setting('openelec', 'wizard_completed') == None:
+            if self.oe.read_setting('amlinux', 'wizard_completed') == None:
                 threading.Thread(target=self.oe.openWizard).start()
         
             while self.stopped == False:

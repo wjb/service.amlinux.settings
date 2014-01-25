@@ -28,6 +28,7 @@ import os
 import xbmc
 import time
 import dbus
+import dbus.service
 import uuid
 import xbmcgui
 import threading
@@ -1147,7 +1148,7 @@ class connmanVpn(object):
 
                         dialog = xbmcgui.Dialog()
                         self.oe.set_busy(0)
-                        dialog.ok('OpenELEC VPN', self.oe._(32378).encode('utf-8'))
+                        dialog.ok('AMLinux VPN', self.oe._(32378).encode('utf-8'))
                         self.oe.dbg_log('connmanVpn::save_vpn_config',
                                 'exit_function (incomplete)', 0)
                         return
@@ -1271,7 +1272,7 @@ class connman:
                         'TetheringIdentifier': {
                             'order': 3,
                             'name': 32198,
-                            'value': 'OpenELEC-AP',
+                            'value': 'AMLinux-AP',
                             'action': 'set_technologie',
                             'type': 'text',
                             'dbus': 'String',
@@ -1283,7 +1284,7 @@ class connman:
                         'TetheringPassphrase': {
                             'order': 4,
                             'name': 32107,
-                            'value': 'openelec',
+                            'value': 'amlinux',
                             'action': 'set_technologie',
                             'type': 'text',
                             'dbus': 'String',
@@ -2183,8 +2184,8 @@ class connman:
                 self.NameOwnerWatch = None
                 self.vpnNameOwnerWatch = None
                 self.parent = parent
-                self.wifiAgentPath = '/OpenELEC/agent_wifi'
-                self.vpnAgentPath = '/OpenELEC/agent_vpn'
+                self.wifiAgentPath = '/AMLinux/agent_wifi'
+                self.vpnAgentPath = '/AMLinux/agent_vpn'
                 
                 self.oe.dbg_log('connman::monitor::__init__',
                                 'exit_function', 0)

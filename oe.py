@@ -44,8 +44,8 @@ import defaults
 
 from xml.dom import minidom
 
-__author__ = 'OpenELEC'
-__scriptid__ = 'service.openelec.settings'
+__author__ = 'AMLinux'
+__scriptid__ = 'service.amlinux.settings'
 
 __addon__ = xbmcaddon.Addon(id=__scriptid__)
 __cwd__ = __addon__.getAddonInfo('path')
@@ -110,7 +110,7 @@ import oeWindows
 
 winOeMain = oeWindows.mainWindow('mainWindow.xml', __cwd__, 'Default', oeMain=__oe__)
 
-xbmc.log('## OpenELEC Addon ## ' + unicode(__addon__.getAddonInfo('version')))
+xbmc.log('## AMLinux Addon ## ' + unicode(__addon__.getAddonInfo('version')))
 
 def _(code):
     return __addon__.getLocalizedString(code)
@@ -119,7 +119,7 @@ def dbg_log(source, text, level=4):
     if os.environ.get('DEBUG', 'no') == 'no':
         return
 
-    xbmc.log('## OpenELEC Addon ## ' + source + ' ## ' + text, level)
+    xbmc.log('## AMLinux Addon ## ' + source + ' ## ' + text, level)
     xbmc.log(traceback.format_exc())
 
 
@@ -346,7 +346,7 @@ def download_file(source, destination, silent=False):
 
         if silent == False:
             download_dlg = xbmcgui.DialogProgress()
-            download_dlg.create('OpenELEC', _(32181).encode('utf-8'), ' ', ' ')
+            download_dlg.create('AMLinux', _(32181).encode('utf-8'), ' ', ' ')
 
         response = urllib2.urlopen(source)
         total_size = int(response.info().getheader('Content-Length'
@@ -424,7 +424,7 @@ def extract_file(
 
             if silent == False:
                 extract_dlg = xbmcgui.DialogProgress()
-                extract_dlg.create('OpenELEC ', _(32186).encode('utf-8'), ' ', ' ')
+                extract_dlg.create('AMLinux ', _(32186).encode('utf-8'), ' ', ' ')
                 extract_dlg.update(0)
 
             compressed = tarfile.open(filename)
@@ -527,7 +527,7 @@ def copy_file(source, destination, silent=False):
 
         if silent == False:
             copy_dlg = xbmcgui.DialogProgress()
-            copy_dlg.create('OpenELEC', _(32181).encode('utf-8'), ' ', ' ')
+            copy_dlg.create('AMLinux', _(32181).encode('utf-8'), ' ', ' ')
 
         total_size = os.path.getsize(source)
 
@@ -643,7 +643,7 @@ def stop_service():
             if hasattr(dictModules[strModule], 'stop_service'):
                 dictModules[strModule].stop_service()
 
-        xbmc.log('## OpenELEC Addon ## STOP SERVICE DONE !')
+        xbmc.log('## AMLinux Addon ## STOP SERVICE DONE !')
     except Exception, e:
 
         dbg_log('oe::stop_service', 'ERROR: (' + repr(e) + ')')
@@ -708,7 +708,7 @@ def load_config():
 
         if config_text == '':
             xml_conf = minidom.Document()
-            xml_main = xml_conf.createElement('openelec')
+            xml_main = xml_conf.createElement('amlinux')
             xml_conf.appendChild(xml_main)
 
             xml_sub = xml_conf.createElement('addon_config')
@@ -842,7 +842,7 @@ def write_setting(module, setting, value, main_node='settings'):
         xml_settings = xml_conf.getElementsByTagName(main_node)
 
         if len(xml_settings) == 0:
-            for xml_main in xml_conf.getElementsByTagName('openelec'):
+            for xml_main in xml_conf.getElementsByTagName('amlinux'):
                 xml_sub = xml_conf.createElement(main_node)
                 xml_main.appendChild(xml_sub)
                 xml_settings = xml_conf.getElementsByTagName(main_node)
@@ -883,7 +883,7 @@ def write_setting(module, setting, value, main_node='settings'):
 
 def load_modules():
 
-  # # load openelec configuration modules
+  # # load amlinux configuration modules
 
     try:
 
@@ -942,7 +942,7 @@ def split_dialog_text(text):
 def reboot_counter(seconds=10, title=' '):
   
     reboot_dlg = xbmcgui.DialogProgress()
-    reboot_dlg.create('OpenELEC %s' % title, ' '
+    reboot_dlg.create('AMLinux %s' % title, ' '
                         , ' ', ' ')
     reboot_dlg.update(0)
     wait_time = seconds
@@ -1024,10 +1024,10 @@ DISTRIBUTION   = load_file('/etc/distribution')
 ARCHITECTURE   = load_file('/etc/arch')
 VERSION        = load_file('/etc/version')    
 BUILD          = load_file('/etc/build')
-DOWNLOAD_DIR   = "/storage/downloads"
-XBMC_USER_HOME = os.environ.get('XBMC_USER_HOME', '/storage/.xbmc')
-CONFIG_CACHE   = os.environ.get('CONFIG_CACHE', '/storage/.cache')
-USER_CONFIG    = os.environ.get('USER_CONFIG', '/storage/.config')
+DOWNLOAD_DIR   = "/root/downloads"
+XBMC_USER_HOME = os.environ.get('XBMC_USER_HOME', '/root/.xbmc')
+CONFIG_CACHE   = os.environ.get('CONFIG_CACHE', '/root/.cache')
+USER_CONFIG    = os.environ.get('USER_CONFIG', '/root/.config')
 TEMP           = '%s/temp/' % XBMC_USER_HOME
 
 if os.path.exists('/etc/machine-id'):
@@ -1038,9 +1038,9 @@ else:
 ############################################################################################
 
 try:
-    configFile = '%s/userdata/addon_data/service.openelec.settings/oe_settings.xml' % XBMC_USER_HOME
-    if not os.path.exists('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME):
-        os.makedirs('%s/userdata/addon_data/service.openelec.settings' % XBMC_USER_HOME)
+    configFile = '%s/userdata/addon_data/service.amlinux.settings/oe_settings.xml' % XBMC_USER_HOME
+    if not os.path.exists('%s/userdata/addon_data/service.amlinux.settings' % XBMC_USER_HOME):
+        os.makedirs('%s/userdata/addon_data/service.amlinux.settings' % XBMC_USER_HOME)
     if not os.path.exists('%s/services' % CONFIG_CACHE):
         os.makedirs('%s/services' % CONFIG_CACHE)
 

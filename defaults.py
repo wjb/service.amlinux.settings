@@ -29,17 +29,17 @@ import os
 ################################################################################
 # Base 
 ################################################################################
-XBMC_USER_HOME = os.environ.get("XBMC_USER_HOME", "/storage/.xbmc")
-CONFIG_CACHE = os.environ.get("CONFIG_CACHE", "/storage/.cache")
-USER_CONFIG = os.environ.get("USER_CONFIG", "/storage/.config")
+XBMC_USER_HOME = os.environ.get("XBMC_USER_HOME", "/root/.xbmc")
+CONFIG_CACHE = os.environ.get("CONFIG_CACHE", "/root/.cache")
+USER_CONFIG = os.environ.get("USER_CONFIG", "/root/.config")
 
 ################################################################################
-# Connamn Module
+# Connman Module
 ################################################################################
 connman = \
     {
         "CONNMAN_DAEMON"  : "/usr/sbin/connmand",
-        "WAIT_CONF_FILE"  : "%s/openelec/network_wait" % CONFIG_CACHE,
+        "WAIT_CONF_FILE"  : "%s/amlinux/network_wait" % CONFIG_CACHE,
         "VPN_PLUGINS_DIR" : "/usr/lib/connman/plugins-vpn",
         "VPN_CONF_DIR"    : "%s/vpn-config/" % USER_CONFIG,
         "ENABLED"         : lambda:(True if os.path.exists(connman["CONNMAN_DAEMON"]) else False),
@@ -54,7 +54,7 @@ bluetooth = \
         "OBEX_DAEMON"      : "/usr/lib/bluetooth/obexd",
         "ENABLED"          : lambda:(True if os.path.exists(connman["BLUETOOTH_DAEMON"]) else False),
       #DEFAULT_VALUES
-        "D_OBEXD_ROOT"     : "/storage/downloads/"
+        "D_OBEXD_ROOT"     : "/root/.xbmc/downloads/"
     }
 
 ################################################################################
@@ -70,8 +70,8 @@ services = \
         "SAMBA_SMDB"            : "/usr/bin/smbd",
       #DEFAULT_VALUES 
         "D_SAMBA_SECURE"        : "0",
-        "D_SAMBA_USERNAME"      : "openelec",
-        "D_SAMBA_PASSWORD"      : "openelec",
+        "D_SAMBA_USERNAME"      : "amlinux",
+        "D_SAMBA_PASSWORD"      : "amlinux",
         "D_SAMBA_AUTOSHARE"     : "1",
     
       #SSH
@@ -100,9 +100,9 @@ system = \
         "SET_CLOCK_CMD"       : "/sbin/hwclock --systohc --utc",
 
       #UPDATE
-        "UPDATE_REQUEST_URL"  : "http://update.openelec.tv/updates.php",
-        "UPDATE_DOWNLOAD_URL" : "http://%s.openelec.tv/%s",
-        "LOCAL_UPDATE_DIR"    : "/storage/.update/",
+        "UPDATE_REQUEST_URL"  : "http://update.amlinux.tv/updates.php",
+        "UPDATE_DOWNLOAD_URL" : "http://%s.amlinux.tv/%s",
+        "LOCAL_UPDATE_DIR"    : "/root/.update/",
         "GET_CPU_FLAG"        : "cat /proc/cpuinfo | grep -q 'flags.* lm ' && echo '1' || echo '0'",
         
       #RESET
@@ -116,8 +116,8 @@ system = \
             
       #BACKUP / RESTORE
         "BACKUP_DIRS"         : [XBMC_USER_HOME, USER_CONFIG, CONFIG_CACHE],
-        "BACKUP_DESTINATION"  : "/storage/backup/",
-        "RESTORE_DIR"         : "/storage/.restore/",
+        "BACKUP_DESTINATION"  : "/root/backup/",
+        "RESTORE_DIR"         : "/root/.restore/",
     }
     
 about = \

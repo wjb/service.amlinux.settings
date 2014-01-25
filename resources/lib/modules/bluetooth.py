@@ -31,6 +31,7 @@ import xbmc
 import xbmcgui
 import time
 import dbus
+import dbus.service
 import threading
 import oeWindows
 
@@ -186,7 +187,7 @@ class bluetooth:
                                    'org.freedesktop.DBus.Properties')
 
                 adapter_interface.Set('org.bluez.Adapter1', 'Alias',
-                        dbus.String(os.environ.get('HOSTNAME', 'openelec')))
+                        dbus.String(os.environ.get('HOSTNAME', 'amlinux')))
                 
                 adapter_interface.Set('org.bluez.Adapter1', 'Powered',
                         dbus.Boolean(state))
@@ -913,8 +914,8 @@ class bluetooth:
                 self.oe = oeMain
                 self.signal_receivers = []
                 self.NameOwnerWatch = None
-                self.btAgentPath = '/OpenELEC/bt_agent'
-                self.obAgentPath = '/OpenELEC/ob_agent'
+                self.btAgentPath = '/AMLinux/bt_agent'
+                self.obAgentPath = '/AMLinux/ob_agent'
                 self.parent = parent
                 
                 self.oe.dbg_log('bluetooth::monitor::__init__',
@@ -1245,7 +1246,7 @@ class bluetooth:
                     if interface['Status'] == 'active':
                         self.parent.download_start = time.time()
                         self.parent.download = xbmcgui.DialogProgress()
-                        self.parent.download.create('OpenELEC Bluetooth Filetransfer', 
+                        self.parent.download.create('AMLinux Bluetooth Filetransfer', 
                                                     '%s: %s' % (self.oe._(32181).encode('utf-8'), 
                                                         self.parent.download_file), 
                                                     '', 
@@ -1260,7 +1261,7 @@ class bluetooth:
 
                         if interface['Status'] == 'complete':
                             xbmcDialog = xbmcgui.Dialog()
-                            answer = xbmcDialog.yesno('OpenELEC Bluetooth Filetransfer',
+                            answer = xbmcDialog.yesno('AMLinux Bluetooth Filetransfer',
                                     self.oe._(32383).encode('utf-8'))
                             if answer == 1:
                                 fil = "%s/%s" % (self.oe.DOWNLOAD_DIR, 
@@ -1390,7 +1391,7 @@ class bluetoothAgent(dbus.service.Object):
                             'enter_function', 0)
 
             xbmcDialog = xbmcgui.Dialog()
-            answer = xbmcDialog.yesno('OpenELEC Bluetooth',
+            answer = xbmcDialog.yesno('AMLinuc Bluetooth',
                     'AuthorizeService')
 
             if answer == 1:
@@ -1533,7 +1534,7 @@ class bluetoothAgent(dbus.service.Object):
                             , repr(passkey), 0)
 
             xbmcDialog = xbmcgui.Dialog()
-            answer = xbmcDialog.yesno('OpenELEC Bluetooth',
+            answer = xbmcDialog.yesno('AMLinux Bluetooth',
                     'RequestConfirmation', unicode(passkey))
 
             self.oe.dbg_log('bluetooth::btAgent::RequestConfirmation::answer='
@@ -1559,7 +1560,7 @@ class bluetoothAgent(dbus.service.Object):
                             , device, 0)
 
             xbmcDialog = xbmcgui.Dialog()
-            answer = xbmcDialog.yesno('OpenELEC Bluetooth',
+            answer = xbmcDialog.yesno('AMLinux Bluetooth',
                     'RequestAuthorization')
 
             if hasattr(self.parent, 'pinkey_window'):
@@ -1614,7 +1615,7 @@ class obexAgent(dbus.service.Object):
                 'org.bluez.obex.Transfer1');
             
             xbmcDialog = xbmcgui.Dialog()
-            answer = xbmcDialog.yesno('OpenELEC Bluetooth',
+            answer = xbmcDialog.yesno('AMLinux Bluetooth',
                     self.oe._(32381), properties['Name'])
 
             if answer != 1:
