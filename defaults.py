@@ -50,7 +50,7 @@ connman = \
 ################################################################################
 bluetooth = \
     {
-        "BLUETOOTH_DAEMON" : "/usr/lib/bluetooth/bluetoothd",
+        "BLUETOOTH_DAEMON" : "/usr/sbin/bluetoothd",
         "OBEX_DAEMON"      : "/usr/lib/bluetooth/obexd",
         "ENABLED"          : lambda:(True if os.path.exists(connman["BLUETOOTH_DAEMON"]) else False),
       #DEFAULT_VALUES
@@ -66,8 +66,8 @@ services = \
                 
       #SAMBA
         "KERNEL_CMD"            : "/proc/cmdline",
-        "SAMBA_NMDB"            : "/usr/bin/nmbd",
-        "SAMBA_SMDB"            : "/usr/bin/smbd",
+        "SAMBA_NMDB"            : "/usr/sbin/nmbd",
+        "SAMBA_SMDB"            : "/usr/sbin/smbd",
       #DEFAULT_VALUES 
         "D_SAMBA_SECURE"        : "0",
         "D_SAMBA_USERNAME"      : "amlinux",
@@ -84,7 +84,7 @@ services = \
         "AVAHI_DAEMON"          : "/usr/sbin/avahi-daemon",
         
       #CRON
-        "CRON_DAEMON"           : "/sbin/crond",
+        "CRON_DAEMON"           : "/usr/sbin/crond",
         
       #LCD
         "LCD_DRIVER_DIR"        : "/usr/lib/lcdproc/",        
