@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#600"
-msgid "[COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] Settings"
+msgid "[COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] Settings"
 msgstr ""
 
 msgctxt "#601"
@@ -817,7 +817,7 @@ msgstr ""
 #empty strings from id 32217 to 32299
 
 msgctxt "#32300"
-msgid "Welcome to [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR]"
+msgid "Welcome to [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR]"
 msgstr ""
 
 msgctxt "#32301"
@@ -825,7 +825,7 @@ msgid "Welcome"
 msgstr ""
 
 msgctxt "#32302"
-msgid "This wizard will guide you through the process of setting up your new [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] Settings.[CR][CR]To begin your [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] experience, select your regional settings and your keyboard layout, then click Next."
+msgid "This wizard will guide you through the process of setting up your new [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] Settings.[CR][CR]To begin your [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] experience, select your regional settings and your keyboard layout, then click Next."
 msgstr ""
 
 msgctxt "#32303"
@@ -833,7 +833,7 @@ msgid "Next"
 msgstr ""
 
 msgctxt "#32304"
-msgid "To be identified easily on the network, your new [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
+msgid "To be identified easily on the network, your new [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
 msgstr ""
 
 msgctxt "#32305"
@@ -841,7 +841,7 @@ msgid "Networking"
 msgstr ""
 
 msgctxt "#32306"
-msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] needs to be connected the Internet.[CR][CR]An Internet connection is also required for [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] to automatically update itself."
+msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] needs to be connected the Internet.[CR][CR]An Internet connection is also required for [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] to automatically update itself."
 msgstr ""
 
 msgctxt "#32307"
@@ -865,11 +865,11 @@ msgid "Sharing and Remote Access"
 msgstr ""
 
 msgctxt "#32312"
-msgid "[COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] also supports SSH for remote access. This is for advanced users who wish to interact with [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR]'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]letmein.[/COLOR]"
+msgid "[COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] also supports SSH for remote access. This is for advanced users who wish to interact with [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR]'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]letmein.[/COLOR]"
 msgstr ""
 
 msgctxt "#32313"
-msgid "In order to share your files between your computers [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
+msgid "In order to share your files between your computers [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
 msgstr ""
 
 msgctxt "#32314"
@@ -889,7 +889,7 @@ msgid "Thank you"
 msgstr ""
 
 msgctxt "#32318"
-msgid "You [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] installation is now complete and you'll now enter XBMC when you can set up your media libraries. For help with this, there is a guide available at wiki.xbmc.org[CR][CR][COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using [COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR] as much as we've enjoying building it."
+msgid "You [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] installation is now complete and you'll now enter XBMC when you can set up your media libraries. For help with this, there is a guide available at wiki.xbmc.org[CR][CR][COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using [COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR] as much as we've enjoying building it."
 msgstr ""
 
 msgctxt "#32319"
@@ -1023,7 +1023,7 @@ msgid "Check for updates now:"
 msgstr ""
 
 msgctxt "#32363"
-msgid "[COLOR FF757677]AM[/COLOR][COLOR FF8ABEE2]Linux[/COLOR]"
+msgid "[COLOR FF06F31C]AML[/COLOR][COLOR FFD5D5D5]inux[/COLOR]"
 msgstr ""
 
 msgctxt "#32364"

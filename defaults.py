@@ -107,7 +107,7 @@ system = \
         
       #RESET
         "XBMC_RESET_FILE"     : "%s/reset_xbmc" % CONFIG_CACHE,
-        "OPENELEC_RESET_FILE" : "%s/reset_oe" % CONFIG_CACHE,
+        "AMLINUX_RESET_FILE"  : "%s/reset_oe" % CONFIG_CACHE,
 
       #KEYBOARD
         "KEYBOARD_INFO"       : "/usr/share/X11/xkb/rules/base.xml",
