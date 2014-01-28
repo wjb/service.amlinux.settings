@@ -46,7 +46,7 @@ class system:
     UPDATE_DOWNLOAD_URL = None
     LOCAL_UPDATE_DIR = None
     XBMC_RESET_FILE = None
-    OPENELEC_RESET_FILE = None
+    AMLINUX_RESET_FILE = None
     KEYBOARD_INFO = None
     UDEV_KEYBOARD_INFO = None
     RPI_KEYBOARD_INFO = None
@@ -860,7 +860,7 @@ class system:
 
                 self.oe.set_busy(1)
 
-                reset_file = open(self.OPENELEC_RESET_FILE, 'w')
+                reset_file = open(self.AMLINUX_RESET_FILE, 'w')
                 reset_file.write('reset')
                 reset_file.close()
 
