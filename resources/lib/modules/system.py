@@ -85,6 +85,7 @@ class system:
                         }},
                     },
                 'keyboard': {
+                    'hidden': 'true',
                     'order': 2,
                     'name': 32009,
                     'settings': 
@@ -131,6 +132,7 @@ class system:
                         }},
                     },
                 'update': {
+                    'hidden': 'true',
                     'order': 3,
                     'name': 32013,
                     'settings': {'AutoUpdate': {
@@ -218,9 +220,9 @@ class system:
 
             self.load_values()
             self.set_hostname()
-            self.set_keyboard_layout()
+#            self.set_keyboard_layout()
             self.set_hw_clock()
-            self.set_auto_update()
+#            self.set_auto_update()
 
             del self.is_service
             
@@ -267,60 +269,60 @@ class system:
             #CPU x64 flag
             self.cpu_lm_flag = self.oe.execute(self.GET_CPU_FLAG, 1)
 
-            # Keyboard Layout
-            (arrLayouts, arrTypes, self.arrVariants) = self.get_keyboard_layouts()
-
-            if not arrTypes is None:
-
-                self.struct['keyboard']['settings']['KeyboardType'
-                        ]['values'] = arrTypes
-
-                value = self.oe.read_setting('system', 'KeyboardType')
-                if not value is None:
-                    self.struct['keyboard']['settings']['KeyboardType'
-                            ]['value'] = value
-
-            if not arrLayouts is None:
-
-                self.struct['keyboard']['settings']['KeyboardLayout1'
-                        ]['values'] = arrLayouts
-                self.struct['keyboard']['settings']['KeyboardLayout2'
-                        ]['values'] = arrLayouts
-
-                value = self.oe.read_setting('system', 'KeyboardLayout1'
-                        )
-                if not value is None:
-                    self.struct['keyboard']['settings'
-                            ]['KeyboardLayout1']['value'] = value
-
-                value = self.oe.read_setting('system', 'KeyboardVariant1'
-                        )
-                if not value is None:
-                    self.struct['keyboard']['settings'
-                            ]['KeyboardVariant1']['value'] = value
-                    
-                value = self.oe.read_setting('system', 'KeyboardLayout2'
-                        )
-                if not value is None:
-                    self.struct['keyboard']['settings'
-                            ]['KeyboardLayout2']['value'] = value
-
-                value = self.oe.read_setting('system', 'KeyboardVariant2'
-                        )
-                if not value is None:
-                    self.struct['keyboard']['settings'
-                            ]['KeyboardVariant2']['value'] = value
-
-                if not arrTypes == None: 
-                    self.keyboard_layouts = True
-                else:
-                    self.rpi_keyboard_layouts = True
-                    
-            if self.oe.ARCHITECTURE == "RPi.arm":
-                self.struct['keyboard']['settings'][
-                    'KeyboardLayout2']['hidden'] = 'true'
-                self.struct['keyboard']['settings'][
-                    'KeyboardType']['hidden'] = 'true'
+#            # Keyboard Layout
+#            (arrLayouts, arrTypes, self.arrVariants) = self.get_keyboard_layouts()
+#
+#            if not arrTypes is None:
+#
+#                self.struct['keyboard']['settings']['KeyboardType'
+#                        ]['values'] = arrTypes
+#
+#                value = self.oe.read_setting('system', 'KeyboardType')
+#                if not value is None:
+#                    self.struct['keyboard']['settings']['KeyboardType'
+#                            ]['value'] = value
+#
+#            if not arrLayouts is None:
+#
+#                self.struct['keyboard']['settings']['KeyboardLayout1'
+#                        ]['values'] = arrLayouts
+#                self.struct['keyboard']['settings']['KeyboardLayout2'
+#                        ]['values'] = arrLayouts
+#
+#                value = self.oe.read_setting('system', 'KeyboardLayout1'
+#                        )
+#                if not value is None:
+#                    self.struct['keyboard']['settings'
+#                            ]['KeyboardLayout1']['value'] = value
+#
+#                value = self.oe.read_setting('system', 'KeyboardVariant1'
+#                        )
+#                if not value is None:
+#                    self.struct['keyboard']['settings'
+#                            ]['KeyboardVariant1']['value'] = value
+#                    
+#                value = self.oe.read_setting('system', 'KeyboardLayout2'
+#                        )
+#                if not value is None:
+#                    self.struct['keyboard']['settings'
+#                            ]['KeyboardLayout2']['value'] = value
+#
+#                value = self.oe.read_setting('system', 'KeyboardVariant2'
+#                        )
+#                if not value is None:
+#                    self.struct['keyboard']['settings'
+#                            ]['KeyboardVariant2']['value'] = value
+#
+#                if not arrTypes == None: 
+#                    self.keyboard_layouts = True
+#                else:
+#                    self.rpi_keyboard_layouts = True
+#                    
+#            if self.oe.ARCHITECTURE == "RPi.arm":
+#                self.struct['keyboard']['settings'][
+#                    'KeyboardLayout2']['hidden'] = 'true'
+#                self.struct['keyboard']['settings'][
+#                    'KeyboardType']['hidden'] = 'true'
                 
             # Hostname
             value = self.oe.read_setting('system', 'hostname')
@@ -328,33 +330,33 @@ class system:
                 self.struct['ident']['settings']['hostname']['value'] = \
                     value
 
-            # AutoUpdate
-            value = self.oe.read_setting('system', 'AutoUpdate')
-            if not value is None:
-                self.struct['update']['settings']['AutoUpdate']['value'
-                        ] = value
-   
-            value = self.oe.read_setting('system', 'UpdateNotify')
-            if not value is None:
-                self.struct['update']['settings']['UpdateNotify'
-                        ]['value'] = value
-            
-            if os.path.isfile("%s/SYSTEM" % self.LOCAL_UPDATE_DIR):
-                self.update_in_progress = True
-                
-            # AutoUpdate = manual by environment var.
-            
-            if os.path.exists('/dev/.update_disabled'):
-    
-                self.update_disabled = True
-                
-                self.struct['update']['hidden'] = 'true'
-                
-                self.struct['update']['settings']['AutoUpdate']['value'
-                    ] = 'manual'
-
-                self.struct['update']['settings']['UpdateNotify'
-                        ]['value'] = '0'
+#            # AutoUpdate
+#            value = self.oe.read_setting('system', 'AutoUpdate')
+#            if not value is None:
+#                self.struct['update']['settings']['AutoUpdate']['value'
+#                        ] = value
+#   
+#            value = self.oe.read_setting('system', 'UpdateNotify')
+#            if not value is None:
+#                self.struct['update']['settings']['UpdateNotify'
+#                        ]['value'] = value
+#            
+#            if os.path.isfile("%s/SYSTEM" % self.LOCAL_UPDATE_DIR):
+#                self.update_in_progress = True
+#                
+#            # AutoUpdate = manual by environment var.
+#            
+#            if os.path.exists('/dev/.update_disabled'):
+#    
+#                self.update_disabled = True
+#                
+#                self.struct['update']['hidden'] = 'true'
+#                
+#                self.struct['update']['settings']['AutoUpdate']['value'
+#                    ] = 'manual'
+#
+#                self.struct['update']['settings']['UpdateNotify'
+#                        ]['value'] = '0'
 
             self.oe.dbg_log('system::load_values', 'exit_function', 0)
         except Exception, e:

@@ -166,6 +166,7 @@ class services:
                         }},
                     },
                 'driver': {
+                    'hidden': 'true',
                     'order': 5,
                     'name': 32007,
                     'settings': {'lcd': {
@@ -179,6 +180,7 @@ class services:
                         }},
                     },                    
                 'bluez': {
+                    'hidden': 'true',
                     'order': 6,
                     'name': 32331,
                     'not_supported': [],
@@ -234,9 +236,9 @@ class services:
             self.initialize_ssh(service=1)
             self.initialize_avahi(service=1)
             self.initialize_cron(service=1)
-            self.init_bluetooth(service=1)
+#            self.init_bluetooth(service=1)
             
-            self.set_lcd_driver()
+#            self.set_lcd_driver()
             
             self.oe.dbg_log('services::start_service', 'exit_function',
                             0)
@@ -304,15 +306,15 @@ class services:
             self.oe.dbg_log('services::load_values', 'enter_function',
                             0)
 
-            #LCD
-            arrLcd = self.get_lcd_drivers()
-            if not arrLcd is None:
-                self.struct['driver']['settings']['lcd']['values'] = \
-                    arrLcd
-            value = self.oe.read_setting('system', 'lcd')
-            if not value is None:
-                self.struct['driver']['settings']['lcd']['value'] = \
-                    value
+#            #LCD
+#            arrLcd = self.get_lcd_drivers()
+#            if not arrLcd is None:
+#                self.struct['driver']['settings']['lcd']['values'] = \
+#                    arrLcd
+#            value = self.oe.read_setting('system', 'lcd')
+#            if not value is None:
+#                self.struct['driver']['settings']['lcd']['value'] = \
+#                    value
                 
             #SAMBA
             if os.path.isfile(self.SAMBA_NMDB) \
@@ -367,24 +369,24 @@ class services:
             else:
                 self.struct['cron']['hidden'] = 'true'
                 
-            #BLUEZ / OBEX
-            if 'bluetooth' in self.oe.dictModules:
-                if os.path.isfile(self.oe.dictModules['bluetooth'].BLUETOOTH_DAEMON):              
-                    self.struct['bluez']['settings']['enabled']['value'] = \
-                        self.oe.get_service_state('bluez')
-
-                    if os.path.isfile(self.oe.dictModules['bluetooth'].OBEX_DAEMON):  
-                        self.struct['bluez']['settings']['obex_enabled']['value'] = \
-                            self.oe.get_service_state('obexd')
-                        self.struct['bluez']['settings']['obex_root']['value'] = \
-                            self.oe.get_service_option('obexd', 'OBEXD_ROOT', 
-                            self.oe.dictModules['bluetooth'].D_OBEXD_ROOT).replace('"', '')
-                    else:
-                        self.struct['bluez']['settings']['obex_enabled']['hidden'] = True
-                        self.struct['bluez']['settings']['obex_root']['hidden'] = True
-                        
-                else:
-                    self.struct['bluez']['hidden'] = 'true'
+#            #BLUEZ / OBEX
+#            if 'bluetooth' in self.oe.dictModules:
+#                if os.path.isfile(self.oe.dictModules['bluetooth'].BLUETOOTH_DAEMON):              
+#                    self.struct['bluez']['settings']['enabled']['value'] = \
+#                        self.oe.get_service_state('bluez')
+#
+#                    if os.path.isfile(self.oe.dictModules['bluetooth'].OBEX_DAEMON):  
+#                        self.struct['bluez']['settings']['obex_enabled']['value'] = \
+#                            self.oe.get_service_state('obexd')
+#                        self.struct['bluez']['settings']['obex_root']['value'] = \
+#                            self.oe.get_service_option('obexd', 'OBEXD_ROOT', 
+#                            self.oe.dictModules['bluetooth'].D_OBEXD_ROOT).replace('"', '')
+#                    else:
+#                        self.struct['bluez']['settings']['obex_enabled']['hidden'] = True
+#                        self.struct['bluez']['settings']['obex_root']['hidden'] = True
+#                        
+#                else:
+#                    self.struct['bluez']['hidden'] = 'true'
             
             self.oe.dbg_log('services::load_values', 'exit_function', 0)
         except Exception, e:
