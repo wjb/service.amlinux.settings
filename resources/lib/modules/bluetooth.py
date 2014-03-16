@@ -1391,7 +1391,7 @@ class bluetoothAgent(dbus.service.Object):
                             'enter_function', 0)
 
             xbmcDialog = xbmcgui.Dialog()
-            answer = xbmcDialog.yesno('AMLinuc Bluetooth',
+            answer = xbmcDialog.yesno('AMLinux Bluetooth',
                     'AuthorizeService')
 
             if answer == 1:

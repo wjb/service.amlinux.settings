@@ -88,7 +88,7 @@ class system:
                     'hidden': 'true',
                     'order': 2,
                     'name': 32009,
-                    'settings': 
+                    'settings':
                         {'KeyboardLayout1': {
                         'order': 1,
                         'name': 32010,
@@ -128,7 +128,7 @@ class system:
                         'action': 'set_keyboard_layout',
                         'type': 'multivalue',
                         'values': [],
-                        'InfoText': 713,                       
+                        'InfoText': 713,
                         }},
                     },
                 'update': {
