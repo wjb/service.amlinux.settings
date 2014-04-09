@@ -32,6 +32,7 @@ import os
 XBMC_USER_HOME = os.environ.get("XBMC_USER_HOME", "/root/.xbmc")
 CONFIG_CACHE = os.environ.get("CONFIG_CACHE", "/root/.cache")
 USER_CONFIG = os.environ.get("USER_CONFIG", "/root/.config")
+SSH_KEYS = "/etc/ssh"
 
 ################################################################################
 # Connman Module
@@ -115,7 +116,8 @@ system = \
         "RPI_KEYBOARD_INFO"   : "/usr/lib/keymaps",
             
       #BACKUP / RESTORE
-        "BACKUP_DIRS"         : [XBMC_USER_HOME, USER_CONFIG, CONFIG_CACHE],
+        "BACKUP_DIRS"         : [XBMC_USER_HOME, USER_CONFIG,
+                                 CONFIG_CACHE, SSH_KEYS],
         "BACKUP_DESTINATION"  : "/root/backup/",
         "RESTORE_DIR"         : "/root/.restore/",
     }
